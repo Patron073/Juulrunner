@@ -1,0 +1,142 @@
+<html>
+<head>
+    <title>Juul Runner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            var scrolled = window.scrollY > 0; // Controleer of er wordt gescrolld
+
+            if (scrolled) {
+                navbar.classList.add('scrolled'); // Voeg de klasse 'scrolled' toe aan de navbar
+            } else {
+                navbar.classList.remove('scrolled'); // Verwijder de klasse 'scrolled' van de navbar
+            }
+        });
+    </script>
+</head>
+<body>
+    <section id="Home">
+        <div class="banner">
+            <div class="navbar" id="navbar">
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#Home" data-after="Home">Home</a></li>
+                    <li><a href="#Game" data-after="Game">Game</a></li>
+                    <li><a href="#OverOns" data-after="Overons">Over ons</a></li>
+                    <li><a href="#Contact" data-after="Contact">Contact</a></li>
+                </ul>
+            </div>
+        <div class="content">
+            <h1 id="typed-text"></h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </section>
+
+
+<section id="Game">
+    <div class="heading">
+        <h1>Game</h1>
+        <div class="game-container">
+            <iframe class="game-iframe" src="https://maurice-gijsel.github.io/JuulRUNNNER"></iframe>
+        </div>
+        <div class="Controls">
+           <p3>Start = ENTER, Springen = SPATIE, Bukken = Shift</p3>
+    </div>
+        </section>
+
+<section id="OverOns">
+    <div class="heading">
+        <h1>Over ons</h1>
+        <p>    
+            Welkom bij Juul Runner! Ons team bestaat uit zes enthousiaste jongens die een game gemaakt hebben </p>
+    </div>
+    <div class="container2">
+        <section class="about">
+            <div class="about-image">
+                <img src="image.png">
+            </div>
+            <div class="about-content">
+                <h2>Ons team</h2>
+                <p><strong>Juul:</strong> Als inspiratie voor het spel en het hoofdpersonage, is Juul de drijvende kracht achter ons project. Zijn avonturen vormen de basis voor het verhaal en de gameplay van Juul Runner.<br>
+                    <strong>Maurice:</strong> Als game-ontwerper brengt Maurice creativiteit en expertise in om een boeiende spelervaring te creëren. Hij staat aan het roer van het game-ontwerp en zorgt ervoor dat elk aspect van de game tot in de puntjes wordt uitgewerkt.<br>
+                    <strong>Yannick:</strong> Als website-ontwerper is Yannick verantwoordelijk voor het creëren van een aantrekkelijke en functionele online aanwezigheid voor Juul Runner. Zijn oog voor design en technische vaardigheden brengen onze website tot leven. <br>
+                    <strong>Donny en Jasper:</strong> Dit dynamische duo is verantwoordelijk voor de visuele aspecten van ons project. Van grafisch ontwerp tot animatie, Donny en Jasper voegen flair en stijl toe aan alles wat we doen.<br>
+                    <strong>Thijs:</strong> Als de belangrijkste man voor administratie houdt Thijs alles in de gaten wat betreft planning en organisatie. Zijn organisatorische vaardigheden en oog voor detail zorgen ervoor dat ons project soepel verloopt en op schema blijft.
+                    </p>
+            </div>
+        </section>
+    </div>
+</section>
+
+<section id="Contact">
+    <section class="contact">
+        <div class="content">
+            <h2>Contact</h2>
+            <p>Stuur een bericht zodra je bugs hebt gevonden in het spel zodat deze opgelost kunnen worden.</p>
+        </div>
+        <div class="container3">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Adres</h3>
+                        <p>Geraert ter Borchstraat 1,<br>'s-Hertogenbosch,Netherlands,<br>5212 CZ</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>juulrunner01@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactform">
+                <form method="post" action="send_email.php">
+                    <h2>Stuur bericht</h2>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Naam*</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Email*</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required"></textarea>
+                        <span>Typ je bericht...*</span>
+                    </div>
+                    <div class="inputbox">
+                       <input type="submit" name="" value="Stuur">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</section>
+
+
+
+
+</div>
+<script>
+    window.onscroll = function() {myFunction()};
+
+var navbar = document.querySelector('.navbar');
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+    </script>  
+</body>
+</html>

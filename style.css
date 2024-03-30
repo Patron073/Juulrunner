@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*background-color: rgb(54,83,81);*/
+    z-index: 0;
+}
+
+
+/*font-family: 'SF Fedora Shadow';
+    src: url('fonts/sf-fedora-shadow.tff') format(truetype);*/
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url('Achtergrond2.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    z-index: 500;
+}
+
+.sbackground{
+width: 100%;
+height: 100%;
+background-color: rgb(54,83,81);
+background-size: cover;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    z-index: 1000;
+    transition: 0.3s;
+}
+.scrolled {
+    background-color: rgb(54,83,81);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo{
+    width: 80px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    background-color: transparent;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    background-color: transparent;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: transparent;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.content{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    top: 20%;
+    transform: translateY(0%);
+    background-color: transparent;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 0;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: transparent;
+}
+.game-container {
+    width: 90%; 
+    height: 75%; 
+    margin: 50px auto; 
+    border: 5px solid #ffffff; 
+    overflow: hidden;
+    justify-content: center; 
+    display: flex;
+    border: none;
+    top: -20px;
+}
+.game-iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    top: -20px;
+    background-color: #ffffff;
+}
+.Controls {
+    position: relative;
+    text-align: center; 
+    margin-top: -40px;
+    color: #000000;
+}
+.highlight-word {
+    border: 1px solid rgb(0, 0, 0); 
+    padding: 2px 5px; 
+    margin: 0;
+    background-color: #ffffff;
+    font-size: 25px;
+}
+.Controls p3{
+    background: #ffffff;
+    font-size: 25px;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+  }
+
+#OverOns{
+margin-top: 300px;
+}
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin:20px auto;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+  
+  .heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .heading h1::after{
+    content:"";
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    display: block;
+    margin:0 auto;
+    background-color: #ffffff;
+  }
+
+  .heading p{
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 35px;
+    background-color: #ffffff;
+  }
+  .container2{
+    width: 90%;
+    margin:0 auto;
+    padding:10px 20px;
+  }
+  .about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+  }
+  .about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+  }
+  .about-image:hover img{
+    transform: scale(1.2);
+  }
+  .about-content{
+    flex: 1;
+  }
+  .about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+    background-color: white;
+  }
+  .about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  .about-content strong{
+    background: #ffffff;
+  }
+  
+  @media screen and (max-width: 768px){
+    .heading{
+        padding:0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container2{
+        padding:0px;
+    }
+    .about{
+        padding:20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding:0px;
+        font-size: 16px;
+    }
+  }
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(Achtergrond2.jpg);
+    background-size: cover;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+
+}
+.contact .content h2{
+ font-size: 36px;
+ font-weight: 500;
+ color: #fff;
+
+}
+.contact .content p{
+    font-weight: 300;
+    color: #000000;
+     
+}
+.container3{
+   width: 100%; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+}
+.container3 .contactInfo{
+  width: 50%;  
+  display: flex;
+  flex-direction: column;
+}
+.container3 .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container3 .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;  
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container3 .contactInfo .box .text{
+   display: flex;
+    margin-left: 16px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container3 .contactInfo .box .text h3{
+   font-weight: 500;
+   color: #00bcd4;
+}
+.contactForm{
+  width: 40%;  
+  padding: 40px;
+  background: #fff;
+}
+.contactForm h2{
+   font-size: 30px;
+   color: #333;
+   font-weight: 500;
+}
+.contactForm .inputbox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;  
+} 
+.contactForm .inputbox input,
+.contactForm .inputbox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputbox input:focus ~ span,
+.contactForm .inputbox input:valid ~ span,
+.contactForm .inputbox textarea:focus ~ span,
+.contactForm .inputbox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputbox input[type="submit"]
+{
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+@media (max-width:991px)
+{
+  .contact{
+    padding: 50px;
+  }
+  .container3{
+    flex-direction: column;
+  }  
+  .container3 .contactinfo{
+   margin-bottom: 40px;
+  }
+  .container3 .contactinfo,
+  .contactForm
+  {
+    width: 100%;
+
+  }
+}
+
+@media (max-width: 1200px) {
+    .game-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .game-iframe {
+        width: 100%; /* Behoud de volledige breedte van het iframe */
+    }
+}
+@media (max-width: 1080px) {
+    .game-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .game-iframe {
+        width: 100%; /* Behoud de volledige breedte van het iframe */
+    }
+}
