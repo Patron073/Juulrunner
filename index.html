@@ -6,6 +6,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5444739475191191"
      crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1RW1QG3MB"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -31,7 +32,7 @@
             <div class="navbar" id="navbar">
                 <img src="logo.png" class="logo">
                 <ul>
-                    <li><a href="#Home" data-after="Home">Home</a></li>
+                    <li><a href="#Home" data-after="Home">gHome</a></li>
                     <li><a href="#Game" data-after="Game">Game</a></li>
                     <li><a href="#OverOns" data-after="Overons">Over ons</a></li>
                     <li><a href="#Contact" data-after="Contact">Contact</a></li>
@@ -125,9 +126,32 @@
             </div>
         </div>
     </section>
-
-
 </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.querySelector('.contactForm');
+            
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Voorkom standaardgedrag van het formulier
+                
+                // Verkrijg formuliergegevens
+                var naam = document.querySelector('input[name="naam"]').value;
+                var email = document.querySelector('input[name="email"]').value;
+                var bericht = document.querySelector('textarea[name="bericht"]').value;
+                
+                // Verzend e-mail via SMTPJS
+                Email.send({
+                    SecureToken : "41C7C1D7406D03DFE8BEE53DAA4B5D936F78EA2B141A8589C8819EA9E98B9AAC135F9A68AC635F8B024E87F2B4F0FCF1",
+                    To : 'juulrunner01@gmail.com',
+                    From : email,
+                    Subject : "Onderwerp van het bericht",
+                    Body : "Naam: " + naam + "<br>Email: " + email + "<br>Bericht: " + bericht
+                }).then(
+                  message => alert(message)
+                );
+            });
+        });
+    </script>
 
 
 
@@ -149,7 +173,7 @@
         });
     });
 </script>
-    <script>
+   /* <script>
     document.addEventListener('DOMContentLoaded', function() {
         var form = document.querySelector('.contactForm form');
         
@@ -164,7 +188,7 @@
             }
         });
     });
-</script>
+</script>*/
 <script>
     window.onscroll = function() {myFunction()};
 
