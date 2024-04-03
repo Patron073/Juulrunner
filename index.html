@@ -32,7 +32,7 @@
             <div class="navbar" id="navbar">
                 <img src="logo.png" class="logo">
                 <ul>
-                    <li><a href="#Home" data-after="Home">Home</a></li>
+                    <li><a href="#Home" data-after="Home">gome</a></li>
                     <li><a href="#Game" data-after="Game">Game</a></li>
                     <li><a href="#OverOns" data-after="Overons">Over ons</a></li>
                     <li><a href="#Contact" data-after="Contact">Contact</a></li>
@@ -122,6 +122,7 @@
                     <div class="inputbox">
                        <input type="submit" name="" value="Stuur">
                     </div>
+                    <div id="notification"></div>
                 </form>
             </div>
         </div>
@@ -151,19 +152,18 @@
         });
     </script>
      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var form = document.getElementById('contactForm');
-            var submitButton = document.getElementById('submitButton');
-            
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Voorkom standaardgedrag van het formulier
+       document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.contactForm');
 
-                // Verander de tekst van de submit-button naar "Bericht verstuurd"
-                submitButton.value = 'Bericht verstuurd';
-                submitButton.disabled = true; // Schakel de button uit om herhaaldelijk klikken te voorkomen
-            });
-        });
-    </script>
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Voorkom standaardgedrag van het formulier
+
+        // Hier kun je de logica toevoegen om het formulier te verzenden
+        // Als het formulier succesvol is verzonden, voeg dan een melding toe aan de pagina
+        var notification = document.getElementById('notification');
+        notification.textContent = "Bericht verzonden!";
+    });
+});
 <script>
     window.onscroll = function() {myFunction()};
 
