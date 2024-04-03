@@ -104,7 +104,8 @@
                 </div>
             </div>
             <div class="contactform">
-                <form method="post" action="send_email.php">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+                    <input type="hidden" name="access_key" value="ec901ba1-4234-43c9-9bc5-e0d3e31073e7">
                     <h2>Stuur bericht</h2>
                     <div class="inputbox">
                         <input type="text" name="" required="required">
@@ -119,7 +120,7 @@
                         <span>Typ je bericht...*</span>
                     </div>
                     <div class="inputbox">
-                       <input type="submit" name="" value="Stuur">
+                       <input type="submit" name="Stuur" value="Stuur">
                     </div>
                 </form>
             </div>
