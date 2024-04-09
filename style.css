@@ -415,3 +415,23 @@ margin-top: 300px;
         width: 100%; /* Behoud de volledige breedte van het iframe */
     }
 }
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.bonner {
+    font-size: 14px;
+}
+
+.bonner a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.bonner a:hover {
+    color: #666;
+}
